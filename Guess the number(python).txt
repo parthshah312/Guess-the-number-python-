@@ -1,0 +1,24 @@
+
+import random
+import time
+n=random.randint(1,100)
+flag=0
+
+time1=int(time.time())
+guess=int(input("Guess value = "))
+while(n != guess & flag != 8):
+    if(guess<n):
+        print("Your value is less")
+        guess=int(input("Guess value = "))
+        flag=int(flag+1)
+    elif(guess>n):
+        print("Your value is greater")
+        guess=int(input("Guess value = "))
+        flag=int(flag+1)
+    elif(guess==n):
+        break
+print("Correct guess")
+time2=int(time.time())
+total=int(time2-time1)
+print("Total tries = ",+flag)
+print("Total time(in secs) = ",+total )
